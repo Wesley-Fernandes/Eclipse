@@ -152,7 +152,7 @@ function checkProjectiles() {
         }
 
         score += 50 - Math.floor(enemy.radius);
-        txtScore.innerText = "SCORE: " + score;
+        txtScore.innerText = "PONTOS: " + score;
 
         projectiles.splice(i, 1);
         createParticles(enemy, p);
@@ -168,12 +168,12 @@ function checkOffScreen(projectile, index) {
     projectile.y + projectile.radius < 0 ||
     projectile.y - projectile.radius > cnv.height
   ) {
-    score -= 100;
-    if (score < 0) {
-      score = 0;
-    }
+    // score -= 100;
+    // if (score < 0) {
+    //   score = 0;
+    // }
 
-    txtScore.innerText = "SCORE: " + score;
+    txtScore.innerText = "PONTOS: " + score;
 
     projectiles.splice(index, 1);
   }
